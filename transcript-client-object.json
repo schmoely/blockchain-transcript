@@ -1,23 +1,25 @@
 
 { 
     "studentInfo":{
-        "ID": "12ecb29e-6533-4ff6-b7c3-0111d5ad7e67",
+        "id": "12ecb29e-6533-4ff6-b7c3-0111d5ad7e67",
         "firstName":"John",
         "lastName":"Doe",
         "birthdate": "11-10-2001", 
         "age":16,
         "gender": "M",
-        "address": "1100 N 5th St., Temper, AZ 85282",
-        "grade": 11
+        "address": "1100 N 5th St., Tempe, AZ 85282",
+        "gradeLevel": 11
     },
-    "courses":[ 
-        {"courseId": 1010, "courseTitle": "Biology-1", "institutionId": 100123, "institutionName": "Arcadia High School", "mark": "A", "credit": 5.0}
-        
+    "courses":[{
+		    "courseId": 1010,
+			"courseTitle": "Biology-1",
+			"institutionId": 100123,
+			"institutionName": "Arcadia High School",
+			"mark": "A",
+			"credit": 5.0
+	    }
     ]
-       
-            
-        
-    }
+}
 
     
 
