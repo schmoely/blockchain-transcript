@@ -10,7 +10,7 @@
         "address": "1100 N 5th St., Tempe, AZ 85282",
         "gradeLevel": 11
     },
-    "courses":[ {}
+    "courses":[{
 		    "courseId": 1010,
 			"courseTitle": "Biology-1",
 			"institutionId": 100123,
