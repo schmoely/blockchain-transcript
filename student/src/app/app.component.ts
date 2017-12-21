@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import * as data from './transcript-client-object.json';
+import { TranscriptService } from './shared/transcript.service';
 
 @Component({
   selector: 'app-root',
@@ -7,17 +7,16 @@ import * as data from './transcript-client-object.json';
   styleUrls: ['./app.component.css']
 })
 
-
 export class AppComponent {
   title = 'app';
   view = 'Student Transcript';
-
-  constructor(){
-    const studentInfo = {};
-    const records = {};
-    //const data = (<any>data).name;
-    //console.log(data); // output 'testing'
+  transcript = {};
+  constructor(private transcriptService: TranscriptService){
+    
   }
-  
+
+  getStudent() {
+    this.transcriptService.getStudentTranscript().subscribe(data => this.transcript = data);
+  }
 
 }
