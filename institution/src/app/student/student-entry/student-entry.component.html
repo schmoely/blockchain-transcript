@@ -1,0 +1,44 @@
+<h2>Student Entry</h2>
+<p>Enter the details of the student below</p>
+
+
+<form [formGroup]="studentEntryForm" (submit)="saveStudent()">
+<!--
+  <div class="form-group">
+    <label for="id">Id</label>
+    <input formControlName="id" id="id" class="form-control w-25"/>
+  </div>
+-->
+
+  <div class="form-group">
+    <label for="firstName">First Name</label>
+    <input formControlName="firstName" id="firstName" class="form-control w-50"/>
+  </div>
+
+  <div class="form-group">
+    <label for="lastName">Last Name</label>
+    <input formControlName="lastName" id="lastName" class="form-control w-50"/>
+  </div>
+
+  <div class="form-group">
+    <label for="birthDate">Birth Date</label>
+    <input formControlName="birthDate" id="birthDate" class="form-control w-25"/>
+  </div>
+
+  <div class="form-group">
+    <label for="gender">Gender</label>
+    <input formControlName="gender" id="gender" class="form-control w-25"/>
+  </div>
+
+  <div class="form-group">
+    <label for="address">Address</label>
+    <input formControlName="address" id="address" class="form-control w-75"/>
+  </div>
+
+  <div class="form-group">
+      <label for="gradeLevel">Grade Level</label>
+      <input formControlName="gradeLevel" id="gradeLevel" class="form-control w-25"/>
+    </div>
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

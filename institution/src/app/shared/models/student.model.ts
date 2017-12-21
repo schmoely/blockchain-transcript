@@ -3,8 +3,7 @@ export class Student {
 
     firstName: string;
     lastName: string;
-    birthdate: Date;
-    age: number;
+    birthDate: Date;
     gender: string;
     address: string;
     gradeLevel: number;

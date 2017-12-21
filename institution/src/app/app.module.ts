@@ -1,18 +1,31 @@
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
+//import { HomeModule } from './home/home.module';
+import { StudentModule } from './student/student.module';
 
+const rootRouting: ModuleWithProviders = RouterModule.forRoot([
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '**', redirectTo: 'home', pathMatch: 'full' }
+], { useHash: false });
 
+/**
+ * The main module for the app. Here we include all of the other modules
+ * components and services that we'll need to build out the full app.
+ */
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    rootRouting,
+//  HomeModule,
+    StudentModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
