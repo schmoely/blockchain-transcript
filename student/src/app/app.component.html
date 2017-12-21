@@ -8,6 +8,7 @@
 </div>
 <h2>Transcripts</h2>
 <div class="main">
+  {{transcript | json}}
   <div class="student-info">
     <p>Student: {{ transcript.studentInfo.firstName }} {{ transcript.studentInfo.lastName }}</p>
     <p>Birthdate: {{ transcript.studentInfo.birthdate }}</p>
@@ -17,6 +18,14 @@
     <h2>Courses</h2>
     <table>
       <tbody>
+        <tr>
+          <th>Course ID</th>
+          <th>Course Title</th>
+          <th>Institution ID</th>
+          <th>Insstitution Name</th>
+          <th>Mark</th>
+          <th>Credit</th>
+        </tr>
         <tr *ngFor='let course of transcript.courses'>
           <td>{{ course.id }}</td>
           <td>{{ course.title }}</td>
