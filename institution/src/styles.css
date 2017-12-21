@@ -4,3 +4,14 @@ body {
     color: #ECECED;
     font-family: Railway sans-serif;
 }
+
+.logo-full-name {
+    /* width: 200px ; */
+    height:50px;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    /* object-fit: fill; */
+    /* background-size: 100px 133px;  */
+    background-repeat: no-repeat;
+}
