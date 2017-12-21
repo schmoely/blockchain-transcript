@@ -12,11 +12,12 @@ export class AppComponent {
   view = 'Student Transcript';
   transcript = {};
   constructor(private transcriptService: TranscriptService){
-    
+    this.getStudent();
   }
 
   getStudent() {
     this.transcriptService.getStudentTranscript().subscribe(data => this.transcript = data);
+    console.log(this.transcript);
   }
 
 }
