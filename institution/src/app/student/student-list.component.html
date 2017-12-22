@@ -1,10 +1,10 @@
 <h2>East Valley Institute of Awesomeness</h2>
 <p>Student Roster</p>
-
+<!--
 <p>
   <button class="btn btn-primary" (click)='onNewStudent()'>New Student</button>
 </p>
-
+-->
 <div class='table-responsive'>
     <table class='table table-striped'
             *ngIf='students && students.length'>
@@ -22,7 +22,7 @@
                 <td>{{ student.id }}</td>
                 <td>{{ student.firstName }}</td>
                 <td>{{ student.lastName }}</td>
-                <td>{{ student.birthDate | date: 'short' }}</td>
+                <td>{{ student.birthDate | date: 'shortDate' }}</td>
                 <td>{{ student.gradeLevel }}</td>
             </tr>
         </tbody>
