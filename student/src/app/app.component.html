@@ -7,11 +7,11 @@
   
 </div>
 
-<div class="main">
+<div class="main" *ngIf='transcript && transcript.studentInfo'>
   <!-- {{transcript | json}} -->
   <h3>Student Information</h3>
   <div class="student-info">
-    <p>Student ID: {{ transcript.studentInfo.id }}</p>
+  <p>Student ID: {{ transcript.studentInfo.id }}</p>
     <p>Student Name: {{ transcript.studentInfo.firstName }} {{ transcript.studentInfo.lastName }}</p>
     <p>Grade Level: {{ transcript.studentInfo.gradeLevel }}</p>
     <p>Birthdate: {{ transcript.studentInfo.birthdate }}</p>

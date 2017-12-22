@@ -24,9 +24,9 @@ export class TranscriptService {
   private getTranscripts(): Observable<Transcript[]> {
     if (TranscriptService.transcripts == null) {
       return this.http.get<Transcript[]>(this.serviceUrl)
-      .do(data => console.log('All: ' + JSON.stringify(data)))
-      .do(data => TranscriptService.transcripts = data)
-      .catch(this.handleError);
+                      .do(data => console.log('All: ' + JSON.stringify(data)))
+                      .do(data => TranscriptService.transcripts = data)
+                      .catch(this.handleError);
     }
 
     return Observable.of(TranscriptService.transcripts);

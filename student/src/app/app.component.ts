@@ -1,6 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { TranscriptService } from './shared/transcript.service';
 
+import { Transcript } from './shared/models';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,14 +12,30 @@ import { TranscriptService } from './shared/transcript.service';
 export class AppComponent {
   title = 'app';
   view = 'Student Transcript';
-  transcript = {};
-  constructor(private transcriptService: TranscriptService){
-    this.getStudent();
+  transcript: Transcript;
+
+  constructor(
+    private transcriptService: TranscriptService
+  ) {  }
+
+  ngOnInit() {
+    this.refresh();
   }
 
-  getStudent() {
-    this.transcriptService.getStudentTranscript().subscribe(data => this.transcript = data);
-    console.log(this.transcript);
+  private refresh() {
+    this.transcriptService.getBlockChain()
+      .subscribe(blockChain => {
+          this.transcript = new Transcript();
+          this.transcript.courses = [];
+          
+          for (let block of blockChain as Array<any>) {
+              if (block.index > 0) {
+                this.transcript.studentInfo = block.data.studentInfo;
+                this.transcript.courses.push(block.data.courses[0]);
+              }
+          }
+        },
+        error => console.log(error),
+        () => {});
   }
-
 }
