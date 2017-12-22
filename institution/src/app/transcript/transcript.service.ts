@@ -6,6 +6,7 @@ import 'rxjs/add/observable/throw';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/do';
+import 'rxjs/add/operator/map';
 
 import { Transcript, Student, CourseEntry } from '../shared/models';
 
@@ -30,6 +31,11 @@ export class TranscriptService {
   }
 
   getTranscript(studentId: string): Observable<Transcript> {
+    return this.getTranscripts()
+      .map((transcripts: Transcript[]) => transcripts.find(xscript => xscript.studentInfo.id === studentId));
+  }
+
+  _getTranscript(studentId: string): Observable<Transcript> {
     const transcript: Transcript = {
       'studentInfo': {
         'id': String(Math.random() * (10000 - 1) + 1),

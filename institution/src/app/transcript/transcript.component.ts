@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { DecimalPipe, DatePipe } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
 
 import { Transcript } from '../shared/models/transcript.model';
 import { TranscriptService } from './transcript.service';
@@ -11,20 +12,32 @@ import { TranscriptService } from './transcript.service';
   encapsulation: ViewEncapsulation.None
 })
 export class TranscriptComponent implements OnInit {
+  studentId: string;
   transcript: Transcript;
+  private sub: any;
 
   constructor(
+    private route: ActivatedRoute,
     private transcriptService: TranscriptService
   ) { }
 
   refresh() {
-    this.transcriptService.getTranscript("1")
+    this.transcriptService.getTranscript(this.studentId)
       .subscribe(transcript => this.transcript = transcript,
                  error => console.log(error),
                  () => {});
   }
 
   ngOnInit() {
-    this.refresh();
+    this.sub = this.route.params.subscribe(params => {
+      this.studentId = params['studentId'];
+
+      this.refresh();
+    });
+ 
+  }
+
+  ngOnDestroy() {
+    this.sub.unsubscribe();
   }
 }

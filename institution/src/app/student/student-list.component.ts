@@ -30,13 +30,8 @@ export class StudentListComponent implements OnInit {
     this.refresh();
   }
 
-  onNewStudent() {
-    this.router.navigateByUrl('/student');
-  }
-
-  onDeleteStudent(student: Student) {
-    this.studentService.deleteStudent(student);
-    this.refresh();
+  onShowTranscript(student: Student) {
+    this.router.navigateByUrl('/transcript/' + student.id);
   }
 
 }

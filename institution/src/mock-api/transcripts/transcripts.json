@@ -1,0 +1,66 @@
+[
+{
+    "studentInfo" : {"id":"721556bf-6a4d-41c0-85f8-19afc854528c","firstName":"Penelopa","lastName":"Masser","birthDate":"2008-12-29T01:23:53Z","gender":"Female","address":"285 Lighthouse Bay Way","gradeLevel":12},
+    "courses" :
+    [
+        {"courseId":691,"courseTitle":"Road to Wellville, The","institutionId":"EVIA","institutionName":"East Valley Institute of Awesomeness","mark":"A","credit":6},
+        {"courseId":668,"courseTitle":"Monsters, Inc.","institutionId":"EVIA","institutionName":"East Valley Institute of Awesomeness","mark":"A","credit":6},
+        {"courseId":642,"courseTitle":"Keeper, The","institutionId":"EVIA","institutionName":"East Valley Institute of Awesomeness","mark":"A","credit":5},
+        {"courseId":231,"courseTitle":"Beyond Therapy","institutionId":"EVIA","institutionName":"East Valley Institute of Awesomeness","mark":"A","credit":6},
+        {"courseId":842,"courseTitle":"Philadelphia Experiment II","institutionId":"EVIA","institutionName":"East Valley Institute of Awesomeness","mark":"A","credit":5},
+        {"courseId":818,"courseTitle":"Trixie","institutionId":"EVIA","institutionName":"East Valley Institute of Awesomeness","mark":"A","credit":7},
+        {"courseId":113,"courseTitle":"For Love of the Game","institutionId":"EVIA","institutionName":"East Valley Institute of Awesomeness","mark":"A","credit":5},
+        {"courseId":482,"courseTitle":"Raise the Red Lantern (Da hong deng long gao gao gua)","institutionId":"EVIA","institutionName":"East Valley Institute of Awesomeness","mark":"A","credit":9},
+        {"courseId":787,"courseTitle":"Ain't Them Bodies Saints","institutionId":"EVIA","institutionName":"East Valley Institute of Awesomeness","mark":"A","credit":7},
+        {"courseId":462,"courseTitle":"Excuse Me Darling, But Lucas Loved Me","institutionId":"EVIA","institutionName":"East Valley Institute of Awesomeness","mark":"A","credit":6}
+    ]
+},
+{
+    "studentInfo" : {"id":"1727451a-bce8-4fa4-9c20-1446bc6a7acf","firstName":"Ryon","lastName":"Ruckman","birthDate":"2006-07-15T02:14:22Z","gender":"Male","address":"64289 Morningstar Court","gradeLevel":12},
+    "courses" :
+    [
+        {"courseId":467,"courseTitle":"Hellbound: Hellraiser II","institutionId":"EVIA","institutionName":"East Valley Institute of Awesomeness","mark":"A","credit":8},
+        {"courseId":311,"courseTitle":"Master and Margaret, The (Il maestro e Margherita)","institutionId":"EVIA","institutionName":"East Valley Institute of Awesomeness","mark":"A","credit":10},
+        {"courseId":613,"courseTitle":"Anna Karenina","institutionId":"EVIA","institutionName":"East Valley Institute of Awesomeness","mark":"A","credit":6},
+        {"courseId":261,"courseTitle":"That's The Way I Like It (a.k.a. Forever Fever)","institutionId":"EVIA","institutionName":"East Valley Institute of Awesomeness","mark":"A","credit":8},
+        {"courseId":747,"courseTitle":"Paper Lion","institutionId":"EVIA","institutionName":"East Valley Institute of Awesomeness","mark":"A","credit":6},
+        {"courseId":420,"courseTitle":"Big Fat Liar","institutionId":"EVIA","institutionName":"East Valley Institute of Awesomeness","mark":"A","credit":5},
+        {"courseId":522,"courseTitle":"Last Dispatch, The","institutionId":"EVIA","institutionName":"East Valley Institute of Awesomeness","mark":"A","credit":6},
+        {"courseId":148,"courseTitle":"Hideaway","institutionId":"EVIA","institutionName":"East Valley Institute of Awesomeness","mark":"A","credit":10},
+        {"courseId":411,"courseTitle":"Mummy: Tomb of the Dragon Emperor, The","institutionId":"EVIA","institutionName":"East Valley Institute of Awesomeness","mark":"A","credit":7},
+        {"courseId":565,"courseTitle":"Element of Crime, The (Forbrydelsens Element)","institutionId":"EVIA","institutionName":"East Valley Institute of Awesomeness","mark":"A","credit":6}
+    ]
+},
+{
+    "studentInfo" : {"id":"66551d83-83ac-43c1-b6fb-95f1eda4d688","firstName":"Ronnie","lastName":"Duffett","birthDate":"2006-06-23T03:30:05Z","gender":"Female","address":"586 Maple Way","gradeLevel":8},
+    "courses" :
+    [
+        {"courseId":745,"courseTitle":"Song of the Bloodred Flower (Laulu tulipunaisesta kukasta)","institutionId":"EVIA","institutionName":"East Valley Institute of Awesomeness","mark":"A","credit":5},
+        {"courseId":885,"courseTitle":"The Town that Dreaded Sundown","institutionId":"EVIA","institutionName":"East Valley Institute of Awesomeness","mark":"A","credit":8},
+        {"courseId":751,"courseTitle":"Perfect Couple, A","institutionId":"EVIA","institutionName":"East Valley Institute of Awesomeness","mark":"A","credit":8},
+        {"courseId":804,"courseTitle":"Bandit, The (Eskiya)","institutionId":"EVIA","institutionName":"East Valley Institute of Awesomeness","mark":"A","credit":7},
+        {"courseId":867,"courseTitle":"Pom Poko (a.k.a. Raccoon War, The) (Heisei tanuki gassen pompoko)","institutionId":"EVIA","institutionName":"East Valley Institute of Awesomeness","mark":"A","credit":8},
+        {"courseId":495,"courseTitle":"Joyeux Noël (Merry Christmas)","institutionId":"EVIA","institutionName":"East Valley Institute of Awesomeness","mark":"A","credit":5},
+        {"courseId":556,"courseTitle":"Starman","institutionId":"EVIA","institutionName":"East Valley Institute of Awesomeness","mark":"A","credit":8},
+        {"courseId":586,"courseTitle":"At First Sight","institutionId":"EVIA","institutionName":"East Valley Institute of Awesomeness","mark":"A","credit":7},
+        {"courseId":763,"courseTitle":"Satan Met a Lady","institutionId":"EVIA","institutionName":"East Valley Institute of Awesomeness","mark":"A","credit":8},
+        {"courseId":141,"courseTitle":"Suing the Devil","institutionId":"EVIA","institutionName":"East Valley Institute of Awesomeness","mark":"A","credit":9}
+    ]
+},
+{
+    "studentInfo" : {"id":"7184b764-9aee-4e4d-93ba-cebf11013b5f","firstName":"Morissa","lastName":"Clere","birthDate":"2004-11-22T19:13:21Z","gender":"Female","address":"0549 Melvin Terrace","gradeLevel":5},
+    "courses" :
+    [
+        {"courseId":256,"courseTitle":"Red Corner","institutionId":"EVIA","institutionName":"East Valley Institute of Awesomeness","mark":"A","credit":10},
+        {"courseId":528,"courseTitle":"Disappeared, The","institutionId":"EVIA","institutionName":"East Valley Institute of Awesomeness","mark":"A","credit":8},
+        {"courseId":826,"courseTitle":"Mao's Last Dancer","institutionId":"EVIA","institutionName":"East Valley Institute of Awesomeness","mark":"A","credit":7},
+        {"courseId":195,"courseTitle":"K.G. (Karate Girl)","institutionId":"EVIA","institutionName":"East Valley Institute of Awesomeness","mark":"A","credit":5},
+        {"courseId":395,"courseTitle":"Colossus: The Forbin Project","institutionId":"EVIA","institutionName":"East Valley Institute of Awesomeness","mark":"A","credit":5},
+        {"courseId":573,"courseTitle":"Eat","institutionId":"EVIA","institutionName":"East Valley Institute of Awesomeness","mark":"A","credit":6},
+        {"courseId":776,"courseTitle":"Ursul","institutionId":"EVIA","institutionName":"East Valley Institute of Awesomeness","mark":"A","credit":6},
+        {"courseId":258,"courseTitle":"Ciel est à vous, Le (Woman Who Dared, The)","institutionId":"EVIA","institutionName":"East Valley Institute of Awesomeness","mark":"A","credit":5},
+        {"courseId":765,"courseTitle":"Hoodwinked!","institutionId":"EVIA","institutionName":"East Valley Institute of Awesomeness","mark":"A","credit":8},
+        {"courseId":535,"courseTitle":"Gypsy","institutionId":"EVIA","institutionName":"East Valley Institute of Awesomeness","mark":"A","credit":6}
+    ]
+}
+]

@@ -8,7 +8,7 @@ import { TranscriptComponent } from './transcript.component';
 import { TranscriptService } from './transcript.service';
 
 const transcriptRouting: ModuleWithProviders = RouterModule.forChild([
-  { path: 'transcripts', component: TranscriptComponent }
+  { path: 'transcript/:studentId', component: TranscriptComponent }
 ]);
 
 @NgModule({
