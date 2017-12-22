@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/throw';
@@ -14,6 +14,8 @@ import { Transcript, Student, CourseEntry } from '../shared/models';
 export class TranscriptService {
   private static transcripts: Transcript[] = null;
   private serviceUrl = './mock-api/transcripts/transcripts.json';
+  private blockChainSvcUrl = "http://localhost:3001/mineBlock"
+  private extractData;
 
   constructor(
     private http: HttpClient
@@ -32,33 +34,17 @@ export class TranscriptService {
 
   getTranscript(studentId: string): Observable<Transcript> {
     return this.getTranscripts()
-      .map((transcripts: Transcript[]) => transcripts.find(xscript => xscript.studentInfo.id === studentId));
+               .map((transcripts: Transcript[]) =>
+                     transcripts.find(xscript => xscript.studentInfo.id === studentId));
   }
 
-  _getTranscript(studentId: string): Observable<Transcript> {
-    const transcript: Transcript = {
-      'studentInfo': {
-        'id': String(Math.random() * (10000 - 1) + 1),
-        'firstName': "Abby",
-        'lastName': "Normal",
-        'birthDate': new Date(),
-        'gender': "F",
-        'address': "123 Main St",
-        'gradeLevel': 6,
-      },
-      'courses': [
-        {
-          'courseId': "101",
-          'courseTitle': "Algebra 101",
-          'institutionId': "EVIA",
-          'institutionName': "East Valley Institute of Awesomeness",
-          'mark': "B",
-          'credit': 5.0
-        }
-      ]
-    }
+  submitCourseGrade(transcript: Transcript): Observable<any> {
+    let headers = { "headers": new HttpHeaders().set('Content-Type', 'application/json') };
+    let data = { "data" : transcript };
 
-    return Observable.of(transcript);
+    return this.http.post(this.blockChainSvcUrl, data, headers)
+                    .do(data => console.log('All: ' + JSON.stringify(data)))
+                    .catch(this.handleError);
   }
 
   private handleError(err: HttpErrorResponse) {

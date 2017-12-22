@@ -49,6 +49,12 @@
                     <td>{{ course.institutionName }}</td>
                     <td>{{ course.mark }}</td>
                     <td>{{ course.credit | number : '1.2-2' }}</td>
+                    <td>
+                        <button type="button" class="btn btn-primary btn-sm" aria-label="Submit"
+                          (click)='onSubmitCourseGrade(transcript.studentInfo, course)'>
+                          <span aria-hidden="true">Submit</span>
+                        </button>
+                    </td>
                 </tr>
             </tbody>
     </table>    

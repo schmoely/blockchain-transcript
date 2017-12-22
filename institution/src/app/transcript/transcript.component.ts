@@ -2,7 +2,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { DecimalPipe, DatePipe } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 
-import { Transcript } from '../shared/models/transcript.model';
+import { Transcript, Student, CourseEntry } from '../shared/models';
 import { TranscriptService } from './transcript.service';
 
 @Component({
@@ -21,7 +21,7 @@ export class TranscriptComponent implements OnInit {
     private transcriptService: TranscriptService
   ) { }
 
-  refresh() {
+  private refresh() {
     this.transcriptService.getTranscript(this.studentId)
       .subscribe(transcript => this.transcript = transcript,
                  error => console.log(error),
@@ -35,6 +35,18 @@ export class TranscriptComponent implements OnInit {
       this.refresh();
     });
  
+  }
+
+  onSubmitCourseGrade(student: Student, courseEntry: CourseEntry) {
+    let transcript: Transcript = {
+      "studentInfo" : student,
+      "courses" : [ courseEntry ]
+    };
+
+    this.transcriptService.submitCourseGrade(transcript)
+      .subscribe(data => console.log(data),
+                 error => console.log(error),
+                 () => {});
   }
 
   ngOnDestroy() {
