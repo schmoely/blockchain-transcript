@@ -6,12 +6,22 @@ body {
 }
 
 .logo-full-name {
-    /* width: 200px ; */
-    height:50px;
+    width: 178px ;
+    /* height:50px; */
     box-sizing: border-box;
     display: block;
     position: relative;
+    margin: 10px 0;
     /* object-fit: fill; */
     /* background-size: 100px 133px;  */
     background-repeat: no-repeat;
+}
+
+.header{
+    background-color: #000;
+    padding: 13px;
+    position: fixed;
+    z-index: 999;
+    width: 200px;
+    height: 200px;
 }
