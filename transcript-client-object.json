@@ -7,7 +7,7 @@
         "birthdate": "11-10-2001", 
         "age":16,
         "gender": "M",
-        "address": "1100 N 5th St., Tempe, AZ 85282",
+        "homeAddress": "1100 N 5th St., Tempe, AZ 85282",
         "gradeLevel": 11
     },
     "courses":[{
