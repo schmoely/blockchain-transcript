@@ -7,11 +7,19 @@ body{
  padding: 15px;
 }
 
-table tr td{
+table {
+    width: 100%;
+}
+
+table tr td th{
     font-family: 'Open Sans', sans-serif;
 }
 h1, h2, h3 {
    font-family: 'Oswald', sans-serif; 
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
 }
 
 .header{
@@ -21,4 +29,8 @@ h1, h2, h3 {
 
 .header h1{
     color: #fff;
+}
+
+.main {
+    padding: 20px;
 }
