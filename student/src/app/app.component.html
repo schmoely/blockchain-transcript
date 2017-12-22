@@ -11,13 +11,36 @@
   <!-- {{transcript | json}} -->
   <h3>Student Information</h3>
   <div class="student-info">
-  <p>Student ID: {{ transcript.studentInfo.id }}</p>
-    <p>Student Name: {{ transcript.studentInfo.firstName }} {{ transcript.studentInfo.lastName }}</p>
-    <p>Grade Level: {{ transcript.studentInfo.gradeLevel }}</p>
-    <p>Birthdate: {{ transcript.studentInfo.birthdate }}</p>
-    <p>Gender: {{ transcript.studentInfo.gender }}</p>
-    <p>Address: {{ transcript.studentInfo.address }}</p>
+      <table class='table table-sm w-50' *ngIf='transcript && transcript.studentInfo'>
+          <tbody>
+              <tr>
+                  <th>Student ID</th>
+                  <td>{{ transcript.studentInfo.id }}</td>
+              </tr>
+              <tr>
+                  <th>Grade Level</th>
+                  <td>{{ transcript.studentInfo.gradeLevel }}</td>
+              </tr>
+              <tr>
+                  <th>Student Name</th>
+                  <td>{{ transcript.studentInfo.firstName }} {{ transcript.studentInfo.lastName }}</td>
+              </tr>
+              <tr>
+                  <th>Birth Date</th>
+                  <td>{{ transcript.studentInfo.birthDate | date: 'shortDate' }}</td>
+              </tr>
+              <tr>
+                  <th>Gender</th>
+                  <td>{{ transcript.studentInfo.gender }}</td>
+              </tr>
+              <tr>
+                  <th>Address</th>
+                  <td>{{ transcript.studentInfo.address }}</td>
+              </tr>
+          </tbody>
+      </table>
   </div>
+  <br />
   <div>
     <h3>Courses</h3>
     <table class="table">
@@ -36,7 +59,7 @@
           <td>{{ course.institutionId }}</td>
           <td>{{ course.institutionName }}</td>
           <td>{{ course.mark }}</td>
-          <td>{{ course.credit }}</td>
+          <td>{{ course.credit | number : '1.2-2' }}</td>
         </tr>
       </tbody>
     </table>

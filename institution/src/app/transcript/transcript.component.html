@@ -1,5 +1,5 @@
 <h2>East Valley Institute of Awesomeness</h2>
-<p>Student Transcript</p>
+<h4>Student Transcript</h4>
 
 <div class='table-responsive'>
     <table class='table table-sm w-50' *ngIf='transcript && transcript.studentInfo'>
@@ -14,7 +14,7 @@
             </tr>
             <tr>
                 <th>Birth Date</th>
-                <td>{{ transcript.studentInfo.birthDate  | date: 'shortDate' }}</td>
+                <td>{{ transcript.studentInfo.birthDate | date: 'shortDate' }}</td>
             </tr>
             <tr>
                 <th>Gender</th>
@@ -27,6 +27,8 @@
         </tbody>
     </table>
 </div>
+
+<br />
 
 <div>
     <table class='table table-striped'

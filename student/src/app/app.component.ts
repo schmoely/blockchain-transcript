@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { TranscriptService } from './shared/transcript.service';
+import { DecimalPipe, DatePipe } from '@angular/common';
 
 import { Transcript } from './shared/models';
 
