@@ -1,10 +1,10 @@
 export class CourseEntry {
-    courseId: number;
+    courseId: string;
 
     courseTitle: string;
     institutionId: string;
-    institutionName: Date;
-    mark: number;
+    institutionName: string;
+    mark: string;
     credit: number;
 }
     

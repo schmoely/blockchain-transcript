@@ -1,0 +1,55 @@
+<h2>East Valley Institute of Awesomeness</h2>
+<p>Student Transcript</p>
+
+<div class='table-responsive'>
+    <table class='table' *ngIf='transcript && transcript.studentInfo'>
+        <tbody>
+            <tr>
+                <th>ID</th>
+                <td>{{ transcript.studentInfo.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ transcript.studentInfo.firstName }} {{ transcript.studentInfo.lastName }}</td>
+            </tr>
+            <tr>
+                <th>Birth Date</th>
+                <td>{{ transcript.studentInfo.birthDate  | date: 'shortDate' }}</td>
+            </tr>
+            <tr>
+                <th>Gender</th>
+                <td>{{ transcript.studentInfo.gender }}</td>
+            </tr>
+            <tr>
+                <th>Grade Level</th>
+                <td>{{ transcript.studentInfo.gradeLevel }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div>
+    <table class='table table-striped'
+            *ngIf='transcript && transcript.courses && transcript.courses.length'>
+        <thead>
+            <tr>
+                <th>Course Id</th>
+                <th>Course Title</th>
+                <th>Institution Id</th>
+                <th>Institution Name</th>
+                <th>Mark</th>
+                <th>Credit</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr *ngFor='let course of transcript.courses'>
+                    <td>{{ course.courseId }}</td>
+                    <td>{{ course.courseTitle }}</td>
+                    <td>{{ course.institutionId }}</td>
+                    <td>{{ course.institutionName }}</td>
+                    <td>{{ course.mark }}</td>
+                    <td>{{ course.credit | number : '1.2-2' }}</td>
+                </tr>
+            </tbody>
+    </table>    
+</div>

@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 //import { HomeModule } from './home/home.module';
 import { StudentModule } from './student/student.module';
+import { TranscriptModule } from './transcript/transcript.module';
 
 const rootRouting: ModuleWithProviders = RouterModule.forRoot([
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -23,7 +24,8 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([
     BrowserModule,
     rootRouting,
 //  HomeModule,
-    StudentModule
+    StudentModule,
+    TranscriptModule
   ],
   providers: [],
   bootstrap: [ AppComponent ]
