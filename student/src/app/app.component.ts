@@ -3,6 +3,7 @@ import { TranscriptService } from './shared/transcript.service';
 import { DecimalPipe, DatePipe } from '@angular/common';
 
 import { Transcript } from './shared/models';
+import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,7 @@ import { Transcript } from './shared/models';
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'app';
   view = 'Student Transcript';
   transcript: Transcript;
@@ -28,8 +29,8 @@ export class AppComponent {
       .subscribe(blockChain => {
           this.transcript = new Transcript();
           this.transcript.courses = [];
-          
-          for (let block of blockChain as Array<any>) {
+
+          for (const block of blockChain as Array<any>) {
               if (block.index > 0) {
                 this.transcript.studentInfo = block.data.studentInfo;
                 this.transcript.courses.push(block.data.courses[0]);

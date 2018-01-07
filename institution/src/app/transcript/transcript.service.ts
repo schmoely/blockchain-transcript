@@ -14,7 +14,7 @@ import { Transcript, Student, CourseEntry } from '../shared/models';
 export class TranscriptService {
   private static transcripts: Transcript[] = null;
   private serviceUrl = './mock-api/transcripts/transcripts.json';
-  private blockChainSvcUrl = "http://localhost:3001/mineBlock"
+  private blockChainSvcUrl = 'http://localhost:3001/mineBlock';
   private extractData;
 
   constructor(
@@ -39,10 +39,10 @@ export class TranscriptService {
   }
 
   submitCourseGrade(transcript: Transcript): Observable<any> {
-    let headers = { "headers": new HttpHeaders().set('Content-Type', 'application/json') };
-    let data = { "data" : transcript };
+    const headers = { 'headers': new HttpHeaders().set('Content-Type', 'application/json') };
+    const blockData = { 'data' : transcript };
 
-    return this.http.post(this.blockChainSvcUrl, data, headers)
+    return this.http.post(this.blockChainSvcUrl, blockData, headers)
                     .do(data => console.log('All: ' + JSON.stringify(data)))
                     .catch(this.handleError);
   }
