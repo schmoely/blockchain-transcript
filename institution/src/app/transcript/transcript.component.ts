@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import { Transcript, Student, CourseEntry } from '../shared/models';
 import { TranscriptService } from './transcript.service';
+import { OnDestroy } from '@angular/core/src/metadata/lifecycle_hooks';
 
 @Component({
   selector: 'app-transcript',
@@ -11,7 +12,7 @@ import { TranscriptService } from './transcript.service';
   styleUrls: ['./transcript.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class TranscriptComponent implements OnInit {
+export class TranscriptComponent implements OnInit, OnDestroy {
   studentId: string;
   transcript: Transcript;
   private sub: any;
@@ -34,13 +35,12 @@ export class TranscriptComponent implements OnInit {
 
       this.refresh();
     });
- 
   }
 
   onSubmitCourseGrade(student: Student, courseEntry: CourseEntry) {
-    let transcript: Transcript = {
-      "studentInfo" : student,
-      "courses" : [ courseEntry ]
+    const transcript: Transcript = {
+      'studentInfo' : student,
+      'courses' : [ courseEntry ]
     };
 
     this.transcriptService.submitCourseGrade(transcript)
